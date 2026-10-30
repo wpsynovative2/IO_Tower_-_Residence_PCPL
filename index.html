@@ -1,0 +1,1380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I/O Tower &amp; I/O Residences | Goregaon West | PCPL</title>
+    <meta
+      name="description"
+      content="I/O Tower & I/O Residences by PCPL — boutique commercial floors and 1, 2 & 3 BHK homes near Ram Mandir Station, Goregaon West, Mumbai. Two addresses. One landmark."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a2337;
+        --muted: #8894aa;
+        --body-text: #5b6a85;
+        --line: #e8ebf1;
+        --tint: #eef2fb;
+        --accent: #2f4a8a;
+        --page: #ffffff;
+        --surface: #ffffff;
+
+        /* brochure palette */
+        --cream: #fbf6f1;
+        --sand: #f3eadf;
+        --gold: #a8783f;
+        --gold-dark: #8a6130;
+        --navy: #16213a;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background: var(--page);
+        color: var(--ink);
+      }
+
+      h1,
+      h2,
+      h3,
+      .serif {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-weight: 600;
+      }
+
+      /* Cormorant defaults to old-style figures, which make "1 / 2 / 3" read oddly */
+      h1, h2, h3, .highlight-value, .spec-grid strong, .connect strong {
+        font-variant-numeric: lining-nums;
+      }
+
+      section {
+        padding: 5.5rem 0;
+      }
+
+      .bg-cream {
+        background: var(--cream);
+      }
+
+      .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 4vw, 2.9rem);
+        line-height: 1.1;
+        margin-bottom: 1.25rem;
+      }
+
+      .section-title em {
+        font-style: normal;
+        color: var(--gold);
+      }
+
+      .lead-text {
+        color: var(--body-text);
+        line-height: 1.75;
+      }
+
+      .btn-gold {
+        background: var(--gold);
+        border-color: var(--gold);
+        color: #fff;
+        padding: 0.7rem 1.5rem;
+        font-weight: 600;
+      }
+
+      .btn-gold:hover,
+      .btn-gold:focus-visible {
+        background: var(--gold-dark);
+        border-color: var(--gold-dark);
+        color: #fff;
+      }
+
+      .btn-outline-ink {
+        border: 1px solid var(--ink);
+        color: var(--ink);
+        padding: 0.7rem 1.5rem;
+        font-weight: 600;
+      }
+
+      .btn-outline-ink:hover,
+      .btn-outline-ink:focus-visible {
+        background: var(--ink);
+        color: #fff;
+      }
+
+      /* ---------- navbar ---------- */
+      .site-nav {
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .site-nav .navbar-brand img {
+        height: 38px;
+      }
+
+      .site-nav .nav-link {
+        font-size: 0.88rem;
+        font-weight: 500;
+        color: var(--ink);
+      }
+
+      .site-nav .nav-link:hover {
+        color: var(--gold);
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        background: var(--cream);
+        padding: 4rem 0 5rem;
+        overflow: hidden;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.6rem, 6vw, 4.4rem);
+        line-height: 1;
+        letter-spacing: 0.02em;
+        margin-bottom: 1.25rem;
+      }
+
+      .hero h1 .amp {
+        color: var(--gold);
+        display: block;
+        font-size: 0.7em;
+        margin: 0.15em 0;
+      }
+
+      .hero-tagline {
+        font-size: 0.95rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--gold-dark);
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-address {
+        color: var(--body-text);
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+      }
+
+      /* arched frame echoes the circular cut-outs used throughout the brochure */
+      .arch {
+        border-radius: 999px 999px 18px 18px;
+        overflow: hidden;
+        box-shadow: 0 30px 60px rgba(26, 35, 55, 0.15);
+      }
+
+      .arch img {
+        width: 100%;
+        display: block;
+      }
+
+      .hero-note {
+        font-size: 0.72rem;
+        color: var(--muted);
+      }
+
+      /* ---------- highlight strip ---------- */
+      .highlights {
+        background: var(--navy);
+        color: #fff;
+        padding: 2.25rem 0;
+      }
+
+      .highlight-value {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #e2c08f;
+        line-height: 1.1;
+      }
+
+      .highlight-label {
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      /* ---------- overview ---------- */
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .feature-list li {
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.7rem 0;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+        font-size: 0.95rem;
+      }
+
+      .feature-list li:last-child {
+        border-bottom: none;
+      }
+
+      .feature-list i {
+        color: var(--gold);
+      }
+
+      .round-img {
+        border-radius: 50%;
+        overflow: hidden;
+        aspect-ratio: 1;
+        box-shadow: 0 20px 50px rgba(26, 35, 55, 0.12);
+      }
+
+      .round-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ---------- projects ---------- */
+      .project-card {
+        background: #fff;
+        border-radius: 18px;
+        overflow: hidden;
+        height: 100%;
+        box-shadow: 0 10px 40px rgba(26, 35, 55, 0.07);
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* square frame keeps each full elevation in view: both towers sit centred in their
+         renders, so only empty sky/side context gets trimmed */
+      .project-card img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      .project-card .card-body-inner {
+        padding: 2rem;
+      }
+
+      .project-card h3 {
+        font-size: 2rem;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.25rem;
+      }
+
+      .project-card .tag {
+        display: inline-block;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--gold-dark);
+        background: var(--sand);
+        border-radius: 999px;
+        padding: 0.3rem 0.8rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .spec-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .spec-grid div {
+        background: var(--cream);
+        border-radius: 10px;
+        padding: 0.85rem 1rem;
+      }
+
+      .spec-grid strong {
+        display: block;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.45rem;
+        line-height: 1.1;
+      }
+
+      .spec-grid span {
+        font-size: 0.78rem;
+        color: var(--body-text);
+      }
+
+      /* ---------- amenities ---------- */
+      .amenity {
+        position: relative;
+        display: block;
+        border-radius: 14px;
+        overflow: hidden;
+        aspect-ratio: 3 / 4;
+        border: 0;
+        padding: 0;
+        width: 100%;
+        background: var(--sand);
+      }
+
+      .amenity img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .amenity:hover img,
+      .amenity:focus-visible img {
+        transform: scale(1.06);
+      }
+
+      .amenity span {
+        position: absolute;
+        inset: auto 0 0 0;
+        padding: 2.5rem 1rem 0.9rem;
+        background: linear-gradient(transparent, rgba(16, 22, 38, 0.8));
+        color: #fff;
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: left;
+      }
+
+      .level-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 1.75rem;
+        height: 100%;
+        border: 1px solid var(--line);
+      }
+
+      .level-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 1.35rem;
+        color: #fff;
+        background: var(--navy);
+        margin-bottom: 1rem;
+      }
+
+      .level-card.ground .level-icon {
+        background: var(--gold);
+      }
+
+      .level-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .level-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .level-card li {
+        display: flex;
+        gap: 0.65rem;
+        padding: 0.45rem 0;
+        font-size: 0.92rem;
+        color: var(--body-text);
+      }
+
+      .level-card li i {
+        color: var(--gold);
+      }
+
+      /* ---------- floor plans ---------- */
+      .plan-tabs {
+        gap: 0.5rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
+      .plan-tabs .nav-link {
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--ink);
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 1.1rem;
+        background: #fff;
+      }
+
+      .plan-tabs .nav-link.active {
+        background: var(--navy);
+        border-color: var(--navy);
+        color: #fff;
+      }
+
+      .plan-frame {
+        background: #fff;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        padding: 1rem;
+        box-shadow: 0 10px 40px rgba(26, 35, 55, 0.06);
+      }
+
+      .plan-frame img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .area-table {
+        font-size: 0.92rem;
+      }
+
+      .area-table th {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 600;
+      }
+
+      /* ---------- location ---------- */
+      .connect {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 1.1rem;
+        height: 100%;
+        display: flex;
+        gap: 0.9rem;
+        align-items: center;
+      }
+
+      .connect i {
+        font-size: 1.4rem;
+        color: var(--gold);
+      }
+
+      .connect strong {
+        display: block;
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+      .connect span {
+        font-size: 0.82rem;
+        color: var(--body-text);
+      }
+
+      .map-frame {
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        box-shadow: 0 10px 40px rgba(26, 35, 55, 0.06);
+      }
+
+      .map-frame img {
+        width: 100%;
+        display: block;
+      }
+
+      /* ---------- contact band ---------- */
+      .contact-band {
+        background:
+          linear-gradient(rgba(16, 22, 38, 0.82), rgba(16, 22, 38, 0.82)),
+          url("assets/img/io-tower-evening.jpg") center / cover no-repeat;
+        color: #fff;
+      }
+
+      .contact-band .section-title {
+        color: #fff;
+      }
+
+      .contact-band a {
+        color: #fff;
+      }
+
+      .contact-item {
+        display: flex;
+        gap: 0.85rem;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .contact-item i {
+        font-size: 1.3rem;
+        color: #e2c08f;
+      }
+
+      .contact-item small {
+        display: block;
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* ---------- project card (RERA section) ---------- */
+      .project-panel {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--surface);
+        box-shadow: 0 10px 40px rgba(26, 35, 55, 0.06);
+        overflow: hidden;
+      }
+
+      /* vertical divider between the three card columns */
+      .panel-col {
+        border-right: 1px solid var(--line);
+      }
+
+      .spec-stack {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .spec {
+        padding: 1.75rem 1.5rem;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        gap: 0.9rem;
+        align-items: flex-start;
+      }
+
+      .spec:last-child {
+        border-bottom: none;
+      }
+
+      .spec-icon {
+        flex: 0 0 auto;
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        background: var(--tint);
+        color: var(--accent);
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+      }
+
+      .spec-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 0.35rem;
+      }
+
+      .spec-value {
+        font-size: 0.95rem;
+        font-weight: 600;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      .spec-value a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* flex column + margin-top:auto on the RERA box lines both QR panels
+         up along the bottom, whatever the address length above them */
+      .project-identity {
+        padding: 1.85rem 1.5rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-identity .rera-box {
+        margin-top: auto;
+      }
+
+      .project-name {
+        font-family: "Cormorant Garamond", Georgia, serif;
+        font-size: 1.8rem;
+        letter-spacing: 0.02em;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .project-address {
+        color: var(--body-text);
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* stacked, because each column is only ~1/3 of the card */
+      .rera-box {
+        background: #f5f7fc;
+        border-radius: 12px;
+        padding: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+        align-items: flex-start;
+      }
+
+      .rera-box img {
+        width: 104px;
+        height: 104px;
+        flex: 0 0 auto;
+        border-radius: 6px;
+        background: #fff;
+      }
+
+      .rera-no {
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 0.35rem;
+      }
+
+      .rera-note {
+        font-size: 0.85rem;
+        color: var(--body-text);
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      /* ---------- lightbox ---------- */
+      #lightbox .modal-content {
+        background: transparent;
+        border: 0;
+      }
+
+      #lightbox img {
+        width: 100%;
+        max-height: 85vh;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+
+      /* stacked columns: the divider moves from the right edge to the bottom */
+      @media (max-width: 991.98px) {
+        .panel-col {
+          border-right: none;
+          border-bottom: 1px solid var(--line);
+        }
+        section {
+          padding: 4rem 0;
+        }
+      }
+
+      @media (max-width: 575.98px) {
+        .project-identity {
+          padding: 1.5rem 1.25rem;
+        }
+        .project-name {
+          font-size: 1.6rem;
+        }
+        .project-card .card-body-inner {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== Navbar ===== -->
+    <!-- <nav class="navbar navbar-expand-lg site-nav sticky-top py-2">
+      <div class="container">
+        <a class="navbar-brand" href="#top">
+          <img src="assets/img/pcpl-logo.png" alt="PCPL — Redeveloping Homes, Rebuilding Communities" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+            <li class="nav-item"><a class="nav-link" href="#floor-plans">Floor Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <a class="btn btn-gold btn-sm px-3 py-2" href="tel:+918655682293">
+            <i class="bi bi-telephone me-1"></i> +91 86556 82293
+          </a>
+        </div>
+      </div>
+    </nav> -->
+
+    <!-- ===== Hero ===== -->
+    <header class="hero" id="top">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <p class="eyebrow">Redevelopment of Rajnigandha CHSL &middot; Goregaon West</p>
+            <h1>
+              I/O Tower
+              <span class="amp">&amp;</span>
+              I/O Residences
+            </h1>
+            <p class="hero-tagline">Two addresses. One landmark.</p>
+            <p class="hero-address">
+              <i class="bi bi-geo-alt text-warning-emphasis"></i>
+              Near Ram Mandir Station, Somanigram, Goregaon West, Mumbai &ndash; 400 104
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-gold" href="#contact">Enquire Now</a>
+              <a
+                class="btn btn-outline-ink"
+                href="assets/IO-Tower-Residences-Brochure.pdf"
+                target="_blank"
+                rel="noopener"
+                ><i class="bi bi-download me-2"></i>Download Brochure</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="arch mx-auto" style="max-width: 520px">
+              <img
+                src="assets/img/cover-twin-towers.jpg"
+                alt="I/O Tower and I/O Residences rising side by side at sunset"
+              />
+            </div>
+            <p class="hero-note text-center mt-3 mb-0">Images for representational purposes only</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Highlights ===== -->
+    <div class="highlights">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-6 col-md-3">
+            <div class="highlight-value">1 / 2 / 3 BHK</div>
+            <div class="highlight-label">Residences</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="highlight-value">6 Units</div>
+            <div class="highlight-label">Per commercial floor</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="highlight-value">4,700 sq.ft.</div>
+            <div class="highlight-label">Full-floor RERA carpet</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="highlight-value">5 Min</div>
+            <div class="highlight-label">To Ram Mandir Station</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Overview ===== -->
+    <section id="overview">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <div class="round-img mx-auto" style="max-width: 460px">
+              <img
+                src="assets/img/dual-purpose.jpg"
+                alt="Office and living spaces framed within a circular facade opening"
+              />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <p class="eyebrow">Overview</p>
+            <h2 class="section-title">A Landmark of <em>Dual Purpose</em></h2>
+            <p class="lead-text">
+              Rising from the redevelopment of Rajnigandha CHSL, this twin-identity development
+              brings together I/O Tower and Residences within a single architectural statement in
+              Oshiwara District Centre.
+            </p>
+            <p class="lead-text mb-4">
+              Sculpted with a striking facade, the tower is designed to be unmistakable on the
+              Goregaon skyline &mdash; by day a study in rhythm and light, by dusk a glowing beacon.
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><i class="bi bi-signpost-split"></i>Separate commercial &amp; residential gates and lobbies</li>
+                  <li><i class="bi bi-p-square"></i>Basement parking (commercial) &middot; podium parking (residential)</li>
+                  <li><i class="bi bi-water"></i>Terrace swimming pool, event lawn &amp; party decks</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="feature-list">
+                  <li><i class="bi bi-tree"></i>Mini urban farming, fruit orchards &amp; tree groove plaza</li>
+                  <li><i class="bi bi-building-up"></i>Passenger &amp; fireman lifts with fire-check lobbies</li>
+                  <li><i class="bi bi-shield-check"></i>BMS / fire control room &amp; sewage treatment plant</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="bg-cream">
+      <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 760px">
+          <p class="eyebrow">Two Addresses</p>
+          <h2 class="section-title">One Perfect <em>Balance</em></h2>
+          <p class="lead-text">
+            Two distinct worlds, thoughtfully separated yet brought together within one landmark.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <article class="project-card">
+              <img
+                src="assets/img/io-tower-evening.jpg"
+                alt="I/O Tower commercial building at dusk"
+                loading="lazy"
+              />
+              <div class="card-body-inner">
+                <h3>I/O TOWER</h3>
+                <span class="tag">Commercial &middot; MahaRERA PC1181012601793</span>
+                <p class="lead-text">
+                  A focused commercial environment with boutique office floors, dedicated access and
+                  efficient floorplates &mdash; designed for businesses that value privacy,
+                  convenience and a professional address.
+                </p>
+                <div class="spec-grid">
+                  <div><strong>6</strong><span>Units per commercial floor</span></div>
+                  <div><strong>4,700 sq.ft.</strong><span>Full-floor RERA carpet area</span></div>
+                  <div><strong>670 sq.ft.</strong><span>Lobby area</span></div>
+                  <div><strong>749&ndash;770 sq.ft.</strong><span>Office RERA carpet areas</span></div>
+                </div>
+                <p class="lead-text small mb-0">
+                  Boutique commercial floors designed around efficiency, privacy and a dedicated
+                  professional arrival experience, with six passenger lifts and a fireman lift.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="project-card">
+              <img
+                src="assets/img/io-residences-day.jpg"
+                alt="I/O Residences residential tower in daylight"
+                loading="lazy"
+              />
+              <div class="card-body-inner">
+                <h3>I/O RESIDENCES</h3>
+                <span class="tag">Residential &middot; MahaRERA PR1181012601732</span>
+                <p class="lead-text">
+                  Thoughtfully planned 1, 2 and 3 BHK homes with a private entrance, dedicated lobby
+                  and layouts designed for daylight and ventilation.
+                </p>
+                <div class="spec-grid">
+                  <div><strong>1 / 2 / 3 BHK</strong><span>Configurations</span></div>
+                  <div><strong>427 sq.ft.</strong><span>1 BHK RERA carpet area</span></div>
+                  <div><strong>657 sq.ft.</strong><span>2 BHK RERA carpet area</span></div>
+                  <div><strong>811 sq.ft.</strong><span>3 BHK RERA carpet area</span></div>
+                </div>
+                <p class="lead-text small mb-0">
+                  A private residential address with its own entrance, lobby and drop-off,
+                  thoughtfully planned for daylight, ventilation and everyday comfort.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Amenities ===== -->
+    <section id="amenities">
+      <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 760px">
+          <p class="eyebrow">Amenities</p>
+          <h2 class="section-title">An address that offers <em>Infinite Possibilities</em></h2>
+          <p class="lead-text">
+            Thoughtfully designed spaces that elevate everyday living and keep you connected to what
+            matters.
+          </p>
+        </div>
+
+        <div class="row g-3 g-md-4">
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/swimming-pool.jpg">
+              <img src="assets/img/swimming-pool.jpg" alt="Terrace swimming pool" loading="lazy" />
+              <span>Swimming Pool</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/event-lawn.jpg">
+              <img src="assets/img/event-lawn.jpg" alt="Event lawn" loading="lazy" />
+              <span>Event Lawn</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/event-deck.jpg">
+              <img src="assets/img/event-deck.jpg" alt="Event deck" loading="lazy" />
+              <span>Event Deck</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/party-deck.jpg">
+              <img src="assets/img/party-deck.jpg" alt="Party deck with skyline view" loading="lazy" />
+              <span>Party Deck</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/outdoor-seating.jpg">
+              <img src="assets/img/outdoor-seating.jpg" alt="Outdoor seating area" loading="lazy" />
+              <span>Outdoor Seating Area</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/outdoor-workstations.jpg">
+              <img src="assets/img/outdoor-workstations.jpg" alt="Outdoor workstations under a pergola" loading="lazy" />
+              <span>Outdoor Workstations</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/games-plaza.jpg">
+              <img src="assets/img/games-plaza.jpg" alt="Games plaza" loading="lazy" />
+              <span>Games Plaza</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/kids-play-area.jpg">
+              <img src="assets/img/kids-play-area.jpg" alt="Kids play area" loading="lazy" />
+              <span>Kids Play Area</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/sky-lounge.jpg">
+              <img src="assets/img/sky-lounge.jpg" alt="Sky lounge" loading="lazy" />
+              <span>Sky Lounge</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/tree-groove-plaza.jpg">
+              <img src="assets/img/tree-groove-plaza.jpg" alt="Tree groove plaza" loading="lazy" />
+              <span>Tree Groove Plaza</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/fruit-orchard.jpg">
+              <img src="assets/img/fruit-orchard.jpg" alt="Fruit orchard" loading="lazy" />
+              <span>Fruit Orchards</span>
+            </button>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <button class="amenity" type="button" data-full="assets/img/mini-urban-farm.jpg">
+              <img src="assets/img/mini-urban-farm.jpg" alt="Mini urban farm" loading="lazy" />
+              <span>Mini Urban Farming</span>
+            </button>
+          </div>
+        </div>
+        <p class="text-center text-muted small mt-3 mb-0">Images for representational purposes only</p>
+      </div>
+    </section>
+
+    <!-- ===== Life Above. Green Below. ===== -->
+    <section class="bg-cream">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">Planned on every level</p>
+          <h2 class="section-title">Life Above. <em>Green Below.</em></h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="level-card">
+              <div class="level-icon"><i class="bi bi-sun"></i></div>
+              <h3>Terrace Level</h3>
+              <ul>
+                <li><i class="bi bi-check2"></i>Swimming pool with sun deck</li>
+                <li><i class="bi bi-check2"></i>Event lawn and deck</li>
+                <li><i class="bi bi-check2"></i>Party lawn + party deck</li>
+                <li><i class="bi bi-check2"></i>Game plaza</li>
+                <li><i class="bi bi-check2"></i>Kids play area</li>
+                <li><i class="bi bi-check2"></i>Outdoor workstation</li>
+                <li><i class="bi bi-check2"></i>Sky Lounge</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="level-card ground">
+              <div class="level-icon"><i class="bi bi-tree"></i></div>
+              <h3>Ground Level</h3>
+              <ul>
+                <li><i class="bi bi-check2"></i>Tree groove plaza</li>
+                <li><i class="bi bi-check2"></i>Fruit orchards</li>
+                <li><i class="bi bi-check2"></i>Mini urban farming</li>
+                <li><i class="bi bi-check2"></i>Landscaped drop-off courts</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="level-card">
+              <div class="level-icon"><i class="bi bi-gear"></i></div>
+              <h3>Infrastructure</h3>
+              <ul>
+                <li><i class="bi bi-check2"></i>Basement parking &ndash; commercial</li>
+                <li><i class="bi bi-check2"></i>Podium parking &ndash; residential</li>
+                <li><i class="bi bi-check2"></i>BMS / fire control room</li>
+                <li><i class="bi bi-check2"></i>Sewage treatment plant</li>
+                <li><i class="bi bi-check2"></i>Electrical substation &amp; DG sets</li>
+                <li><i class="bi bi-check2"></i>Fireman lifts &amp; fire-check lobbies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Floor plans ===== -->
+    <section id="floor-plans">
+      <div class="container">
+        <div class="text-center mb-4">
+          <p class="eyebrow">Floor Plans</p>
+          <h2 class="section-title">Layouts designed for <em>light &amp; space</em></h2>
+        </div>
+
+        <ul class="nav plan-tabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#plan-ground" type="button" role="tab">Ground Floor</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#plan-res" type="button" role="tab">Typical Residential</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#plan-comm" type="button" role="tab">Typical Commercial</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#plan-opt1" type="button" role="tab">Combined Commercial &ndash; Option 1</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#plan-opt2" type="button" role="tab">Combined Commercial &ndash; Option 2</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#plan-terrace" type="button" role="tab">Terrace Floor</button>
+          </li>
+        </ul>
+
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-9">
+            <div class="tab-content plan-frame">
+              <div class="tab-pane fade show active" id="plan-ground" role="tabpanel">
+                <a href="assets/plans/ground-floor.jpg" target="_blank" rel="noopener">
+                  <img src="assets/plans/ground-floor.jpg" alt="Ground floor plan" loading="lazy" />
+                </a>
+              </div>
+              <div class="tab-pane fade" id="plan-res" role="tabpanel">
+                <a href="assets/plans/typical-residential.jpg" target="_blank" rel="noopener">
+                  <img src="assets/plans/typical-residential.jpg" alt="Typical residential floor plan" loading="lazy" />
+                </a>
+              </div>
+              <div class="tab-pane fade" id="plan-comm" role="tabpanel">
+                <a href="assets/plans/typical-commercial.jpg" target="_blank" rel="noopener">
+                  <img src="assets/plans/typical-commercial.jpg" alt="Typical commercial floor plan" loading="lazy" />
+                </a>
+              </div>
+              <div class="tab-pane fade" id="plan-opt1" role="tabpanel">
+                <a href="assets/plans/combined-commercial-option-1.jpg" target="_blank" rel="noopener">
+                  <img src="assets/plans/combined-commercial-option-1.jpg" alt="Combined commercial floor plan, option 1" loading="lazy" />
+                </a>
+              </div>
+              <div class="tab-pane fade" id="plan-opt2" role="tabpanel">
+                <a href="assets/plans/combined-commercial-option-2.jpg" target="_blank" rel="noopener">
+                  <img src="assets/plans/combined-commercial-option-2.jpg" alt="Combined commercial floor plan, option 2" loading="lazy" />
+                </a>
+              </div>
+              <div class="tab-pane fade" id="plan-terrace" role="tabpanel">
+                <a href="assets/plans/terrace-floor.jpg" target="_blank" rel="noopener">
+                  <img src="assets/plans/terrace-floor.jpg" alt="Terrace floor plan" loading="lazy" />
+                </a>
+              </div>
+            </div>
+            <p class="text-muted small mt-2 mb-0">
+              <i class="bi bi-zoom-in me-1"></i>Click a plan to open it full size.
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <div class="plan-frame">
+              <h3 class="h5 mb-3">I/O Residences</h3>
+              <table class="table area-table mb-4">
+                <thead>
+                  <tr><th>Type</th><th class="text-end">RERA C.A.</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1 BHK</td><td class="text-end">427 sq.ft.</td></tr>
+                  <tr><td>2 BHK</td><td class="text-end">657 sq.ft.</td></tr>
+                  <tr><td>3 BHK</td><td class="text-end">811 sq.ft.</td></tr>
+                </tbody>
+              </table>
+              <h3 class="h5 mb-3">I/O Tower</h3>
+              <table class="table area-table mb-0">
+                <thead>
+                  <tr><th>Type</th><th class="text-end">RERA C.A.</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Office</td><td class="text-end">749&ndash;770 sq.ft.</td></tr>
+                  <tr><td>Full floor</td><td class="text-end">4,700 sq.ft.</td></tr>
+                  <tr><td>Lobby</td><td class="text-end">670 sq.ft.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Location ===== -->
+    <section id="location" class="bg-cream">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow">Location</p>
+          <h2 class="section-title">At the heart of <em>Mumbai's West</em></h2>
+          <p class="lead-text mb-0">
+            Near Ram Mandir Station, Somanigram, Goregaon West, Mumbai &ndash; 400 104
+          </p>
+        </div>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="connect"><i class="bi bi-train-front"></i><div><strong>5 Min</strong><span>Ram Mandir Railway Station</span></div></div>
+              </div>
+              <div class="col-6">
+                <div class="connect"><i class="bi bi-train-front"></i><div><strong>8 Min</strong><span>Goregaon Station</span></div></div>
+              </div>
+              <div class="col-6">
+                <div class="connect"><i class="bi bi-sign-turn-right"></i><div><strong>10 Min</strong><span>Western Express Highway</span></div></div>
+              </div>
+              <div class="col-6">
+                <div class="connect"><i class="bi bi-signpost-2"></i><div><strong>12 Min</strong><span>NESCO / JVLR</span></div></div>
+              </div>
+              <div class="col-6">
+                <div class="connect"><i class="bi bi-mortarboard"></i><div><strong>5 Min</strong><span>Schools &amp; Colleges</span></div></div>
+              </div>
+              <div class="col-6">
+                <div class="connect"><i class="bi bi-hospital"></i><div><strong>7 Min</strong><span>Hospitals &amp; Healthcare</span></div></div>
+              </div>
+              <div class="col-6">
+                <div class="connect"><i class="bi bi-bag"></i><div><strong>10 Min</strong><span>Malls &amp; Multiplexes</span></div></div>
+              </div>
+              <div class="col-6">
+                <div class="connect"><i class="bi bi-airplane"></i><div><strong>25 Min</strong><span>CSMI Airport (T2)</span></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="map-frame">
+              <img
+                src="assets/img/location-map.jpg"
+                alt="Location map showing I/O Tower and Residences on Ram Mandir Road near Ram Mandir Railway Station and Oshiwara Garden Road"
+                loading="lazy"
+              />
+            </div>
+            <div class="text-center mt-3">
+              <a
+                class="btn btn-outline-ink btn-sm"
+                href="https://www.google.com/maps/search/?api=1&query=Ram+Mandir+Road+Somanigram+Goregaon+West+Mumbai+400104"
+                target="_blank"
+                rel="noopener"
+                ><i class="bi bi-map me-2"></i>Open in Google Maps</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact band ===== -->
+    <section id="contact" class="contact-band">
+      <div class="container text-center">
+        <p class="eyebrow" style="color: #e2c08f">Get in touch</p>
+        <h2 class="section-title">Book a site visit</h2>
+        <p class="mb-5" style="color: rgba(255, 255, 255, 0.8)">
+          Speak to our team about I/O Tower offices or I/O Residences homes.
+        </p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4 col-lg-3">
+            <div class="contact-item">
+              <i class="bi bi-telephone"></i>
+              <div><small>Call us</small><a href="tel:+918655682293" class="fw-semibold text-decoration-none">+91 86556 82293</a></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="contact-item">
+              <i class="bi bi-globe2"></i>
+              <div><small>Website</small><a href="https://www.pranavconstructions.com" target="_blank" rel="noopener" class="fw-semibold text-decoration-none">www.pranavconstructions.com</a></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4">
+            <div class="contact-item">
+              <i class="bi bi-geo-alt"></i>
+              <div><small>Regd. Office</small><span class="fw-semibold">1001, DLH Park, SV Road, Goregaon (W), Mumbai &ndash; 104</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-3 justify-content-center mt-5">
+          <a class="btn btn-gold" href="tel:+918655682293"><i class="bi bi-telephone me-2"></i>Call Now</a>
+          <a class="btn btn-outline-light fw-semibold" style="padding: 0.7rem 1.5rem" href="assets/IO-Tower-Residences-Brochure.pdf" target="_blank" rel="noopener"><i class="bi bi-download me-2"></i>Download Brochure</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Project / RERA card ===== -->
+    <section class="py-5">
+      <div class="container" style="max-width: calc(1200px + var(--bs-gutter-x))">
+        <div class="project-panel">
+          <div class="row g-0">
+            <!-- Column 1: project details -->
+            <div class="col-lg-4 panel-col">
+              <div class="spec-stack h-100">
+                <div class="spec">
+                  <div class="spec-icon"><i class="bi bi-hammer"></i></div>
+                  <div>
+                    <div class="spec-label">Project Status</div>
+                    <p class="spec-value">Under Construction</p>
+                  </div>
+                </div>
+                <div class="spec">
+                  <div class="spec-icon"><i class="bi bi-telephone"></i></div>
+                  <div>
+                    <div class="spec-label">Phone Number</div>
+                    <p class="spec-value"><a href="tel:+912262769999">+91 2262769999</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: IO Tower -->
+            <div class="col-lg-4 panel-col">
+              <div class="project-identity">
+                <h2 class="project-name">IO TOWER</h2>
+                <p class="project-subtitle">Project IO Tower By PCPL</p>
+                <p class="project-address">
+                  Somanigram, Near Ram Mandir Railway Station, Goregaon West, Mumbai &mdash; 400104
+                </p>
+
+                <div class="rera-box">
+                  <img
+                    src="assets/qr/io-tower-by-pcpl.png"
+                    alt="MahaRERA registration QR code for IO Tower by PCPL"
+                  />
+                  <div>
+                    <div class="rera-no">MahaRERA No: PC1181012601793</div>
+                    <p class="rera-note">
+                      Scan the QR code, or view the registration on
+                      <a
+                        href="https://maharerait.maharashtra.gov.in/project/view/66376"
+                        target="_blank"
+                        rel="noopener"
+                        >maharera.maharashtra.gov.in</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3: IO Residences -->
+            <div class="col-lg-4">
+              <div class="project-identity">
+                <h2 class="project-name">IO RESIDENCES</h2>
+                <p class="project-subtitle">Project IO Residences By PCPL.</p>
+                <p class="project-address">
+                  Somanigram, Near Ram Mandir Railway Station, Goregaon West, Mumbai - 400104
+                </p>
+
+                <div class="rera-box">
+                  <img
+                    src="assets/qr/io-residences-by-pcpl.png"
+                    alt="MahaRERA registration QR code for IO Residences by PCPL"
+                  />
+                  <div>
+                    <div class="rera-no">MahaRERA No: PR1181012601732</div>
+                    <p class="rera-note">
+                      Scan the QR code, or view the registration on
+                      <a
+                        href="https://maharerait.maharashtra.gov.in/project/view/66190"
+                        target="_blank"
+                        rel="noopener"
+                        >maharera.maharashtra.gov.in</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Amenity lightbox ===== -->
+    <div class="modal fade" id="lightbox" tabindex="-1" aria-label="Amenity image" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <button type="button" class="btn-close btn-close-white ms-auto mb-2" data-bs-dismiss="modal" aria-label="Close"></button>
+          <img src="" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = lightbox.querySelector("img");
+      const modal = new bootstrap.Modal(lightbox);
+
+      document.querySelectorAll(".amenity").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          lightboxImg.src = btn.dataset.full;
+          lightboxImg.alt = btn.querySelector("img").alt;
+          modal.show();
+        });
+      });
+
+      // collapse the mobile menu after picking a section
+      document.querySelectorAll("#mainNav .nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          bootstrap.Collapse.getInstance(document.getElementById("mainNav"))?.hide();
+        });
+      });
+    </script>
+  </body>
+</html>
