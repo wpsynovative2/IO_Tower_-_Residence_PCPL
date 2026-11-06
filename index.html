@@ -503,40 +503,61 @@
         display: block;
       }
 
-      /* ---------- contact band ---------- */
-      .contact-band {
-        background:
-          linear-gradient(rgba(16, 22, 38, 0.82), rgba(16, 22, 38, 0.82)),
-          url("assets/img/io-tower-evening.jpg") center / cover no-repeat;
-        color: #fff;
-      }
-
-      .contact-band .section-title {
-        color: #fff;
-      }
-
-      .contact-band a {
-        color: #fff;
-      }
-
-      .contact-item {
-        display: flex;
-        gap: 0.85rem;
-        align-items: flex-start;
-        text-align: left;
-      }
-
-      .contact-item i {
-        font-size: 1.3rem;
-        color: #e2c08f;
-      }
-
-      .contact-item small {
-        display: block;
+      /* ---------- project documents ---------- */
+      .section-eyebrow {
         font-size: 0.7rem;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.6);
+        color: var(--muted);
+      }
+
+      /* the global h2 rule sets Cormorant; this heading stays in Inter */
+      .docs-title {
+        font-family: "Inter", system-ui, -apple-system, sans-serif;
+      }
+
+      .doc-btn {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        padding: 1rem 1.15rem;
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        color: var(--ink);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.92rem;
+        transition:
+          border-color 0.18s,
+          box-shadow 0.18s,
+          transform 0.18s;
+      }
+
+      .doc-btn:hover,
+      .doc-btn:focus-visible {
+        border-color: var(--accent);
+        box-shadow: 0 6px 20px rgba(47, 74, 138, 0.12);
+        transform: translateY(-2px);
+        color: var(--accent);
+      }
+
+      .doc-btn .bi-file-earmark-pdf {
+        font-size: 1.35rem;
+        color: #c0392b;
+      }
+
+      .doc-btn .bi-arrow-up-right {
+        margin-left: auto;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .doc-btn small {
+        color: var(--body-text);
       }
 
       /* ---------- project card (RERA section) ---------- */
@@ -1221,43 +1242,48 @@
       </div>
     </section>
 
-    <!-- ===== Contact band ===== -->
-    <section id="contact" class="contact-band">
-      <div class="container text-center">
-        <p class="eyebrow" style="color: #e2c08f">Get in touch</p>
-        <h2 class="section-title">Book a site visit</h2>
-        <p class="mb-5" style="color: rgba(255, 255, 255, 0.8)">
-          Speak to our team about I/O Tower offices or I/O Residences homes.
-        </p>
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-4 col-lg-3">
-            <div class="contact-item">
-              <i class="bi bi-telephone"></i>
-              <div><small>Call us</small><a href="tel:+918655682293" class="fw-semibold text-decoration-none">+91 86556 82293</a></div>
-            </div>
+    <!-- ===== Project documents ===== -->
+    <section id="documents" class="pb-0">
+      <div class="container text-center" style="max-width: calc(1200px + var(--bs-gutter-x))">
+        <div class="section-eyebrow mb-2">Project Documents</div>
+        <h2 class="docs-title h4 fw-bold mb-4">
+          IO Tower &mdash; Rajnigandha CHSL &middot; Notices &amp; Approvals
+        </h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a class="doc-btn" target="_blank" rel="noopener" href="assets/docs/english-newspaper-notice-free-press-journal.pdf">
+              <i class="bi bi-file-earmark-pdf"></i>
+              <span>English Newspaper Notice<br /><small class="fw-normal">The Free Press Journal</small></span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
           </div>
-          <div class="col-md-4 col-lg-3">
-            <div class="contact-item">
-              <i class="bi bi-globe2"></i>
-              <div><small>Website</small><a href="https://www.pranavconstructions.com" target="_blank" rel="noopener" class="fw-semibold text-decoration-none">www.pranavconstructions.com</a></div>
-            </div>
+          <div class="col-md-6">
+            <a class="doc-btn" target="_blank" rel="noopener" href="assets/docs/marathi-newspaper-notice-navshakti.pdf">
+              <i class="bi bi-file-earmark-pdf"></i>
+              <span>Marathi Newspaper Notice<br /><small class="fw-normal">Navshakti</small></span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
           </div>
-          <div class="col-md-4 col-lg-4">
-            <div class="contact-item">
-              <i class="bi bi-geo-alt"></i>
-              <div><small>Regd. Office</small><span class="fw-semibold">1001, DLH Park, SV Road, Goregaon (W), Mumbai &ndash; 104</span></div>
-            </div>
+          <div class="col-md-6">
+            <a class="doc-btn" target="_blank" rel="noopener" href="assets/docs/consent-to-establish-27-01-2026.pdf">
+              <i class="bi bi-file-earmark-pdf"></i>
+              <span>Consent to Establish<br /><small class="fw-normal">Dated 27-01-2026</small></span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
           </div>
-        </div>
-        <div class="d-flex flex-wrap gap-3 justify-content-center mt-5">
-          <a class="btn btn-gold" href="tel:+918655682293"><i class="bi bi-telephone me-2"></i>Call Now</a>
-          <a class="btn btn-outline-light fw-semibold" style="padding: 0.7rem 1.5rem" href="assets/IO-Tower-Residences-Brochure.pdf" target="_blank" rel="noopener"><i class="bi bi-download me-2"></i>Download Brochure</a>
+          <div class="col-md-6">
+            <a class="doc-btn" target="_blank" rel="noopener" href="assets/docs/environment-clearance-letter-08-01-2026.pdf">
+              <i class="bi bi-file-earmark-pdf"></i>
+              <span>Environment Clearance Letter<br /><small class="fw-normal">Dated 08-01-2026</small></span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ===== Project / RERA card ===== -->
-    <section class="py-5">
+    <section id="contact" class="py-5">
       <div class="container" style="max-width: calc(1200px + var(--bs-gutter-x))">
         <div class="project-panel">
           <div class="row g-0">
